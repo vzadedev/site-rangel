@@ -1,6 +1,10 @@
 import Caption from "../modules/components/caption";
+import { CorinthiansCarousel } from "../modules/components/carousel";
 import { Collections } from "../modules/components/collections";
+import { Footer } from "../modules/components/footer";
 import { Navbar } from "../modules/components/navbar";
+import { Teams } from "../modules/components/teams";
+import { Us } from "../modules/components/us";
 
 export default function Page() {
 
@@ -21,6 +25,10 @@ export default function Page() {
             </video>
             <Caption />
             <Collections />
+            <Teams />
+            <CorinthiansCarousel />
+            <Us />
+            <Footer />
         </div>
     )
 }

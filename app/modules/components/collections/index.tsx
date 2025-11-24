@@ -80,28 +80,28 @@ export const Collections = () => {
             </div>
 
             <div className="flex gap-2 px-4">
-                <div className="w-1/4 h-[700px] border bg-gray-200">
+                <div className="w-1/4 h-[700px]  bg-gray-200">
                     <img
                         src="https://imgnike-a.akamaihd.net/768x768/031501IDA1.jpg"
                         alt="Chuteiras"
                         className="w-full h-full object-cover transition-all duration-500 group-hover:grayscale group-hover:scale-105"
                     />
                 </div>
-                <div className="w-1/4 h-[700px] border bg-gray-200">
+                <div className="w-1/4 h-[700px]  bg-gray-200">
                     <img
                         src="https://assets.adidas.com/images/w_600,f_auto,q_auto/2249e4245e0e4e8a9caa6dfe9f7b1ab8_9366/Moletom_Capuz_Baggy_Adicolor_Preto_JC6251_21_model.jpg"
                         alt="Chuteiras"
                         className="w-full h-full object-cover transition-all duration-500 group-hover:grayscale group-hover:scale-105"
                     />
                 </div>
-                <div className="w-1/4 h-[700px] border bg-gray-200">
+                <div className="w-1/4 h-[700px]  bg-gray-200">
                     <img
                         src="https://down-br.img.susercontent.com/file/cn-11134207-7qukw-lez5k6zrv7s9ba"
                         alt="Chuteiras"
                         className="w-full h-full object-cover transition-all duration-500 group-hover:grayscale group-hover:scale-105"
                     />
                 </div>
-                <div className="w-1/4 h-[700px] border bg-gray-200">
+                <div className="w-1/4 h-[700px]  bg-gray-200">
                     <img
                         src="https://imgnike-a.akamaihd.net/360x360/025166IEA2.jpg"
                         alt="Chuteiras"
@@ -110,7 +110,7 @@ export const Collections = () => {
                 </div>
                 
             </div>
-            <div className="w-full h-[500px] flex  items-center justify-center">
+            {/* <div className="w-full h-[500px] flex  items-center justify-center">
                 <div className="w-[70%]  flex flex-col items-start justify-start text-gray-900 gap-2">
                     <span className=" font-thin text-2xl">
                         Produtos mais buscados
@@ -186,7 +186,7 @@ export const Collections = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }

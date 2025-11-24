@@ -31,8 +31,7 @@ export const Navbar = () => {
         <div className="w-full flex flex-col">
             <div className="w-full h-8 text-black bg-gray-100 flex justify-between items-center p-8">
                 <div className="flex items-center">
-                    <div className="uppercase font-stretch-200%">
-                        GoalPoint
+                    <div className="uppercase font-stretch-200% text-sm font-light">
                     </div>
                 </div>
                 <div className="flex items-center gap-4 text font-light">
@@ -48,17 +47,11 @@ export const Navbar = () => {
             <div className="h-20 bg-white flex justify-between items-center px-8">
                 <img className="w-16 h-16" src="/images/logo.png" />
                 <div className="flex gap-12 text- font-thin text-black">
-                    <span className="">Ofertas</span>
                     <span className="">Lançamentos</span>
                     <span className="">Masculino</span>
                     <span className="">Feminino</span>
                 </div>
-                <div>
-                    <div className="w-fit rounded-2xl flex items-center justify-start bg-gray-100 px-8 text-gray-500  gap-2 py-0.5 font-thin">
-                        <CiSearch />
-                        Buscar
-                    </div>
-                </div>
+                <div></div>
             </div>
             <div className="relative w-full h-14 overflow-hidden bg-gray-100 flex justify-center items-center text-black">
                 <AnimatePresence initial={false} custom={direction}>
