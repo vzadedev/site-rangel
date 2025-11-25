@@ -4,7 +4,8 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export const Teams = () => {
-  const [category, setCategory] = useState("selecoes");
+   type Category = keyof typeof data;
+  const [category, setCategory] = useState<Category>("selecoes");
 
   const data = {
     selecoes: [
@@ -32,7 +33,7 @@ export const Teams = () => {
     ],
   };
 
-  const teams = data[category];
+  const teams = data[category]
 
   return (
     <div className="w-full flex items-center px-8 py-14">
@@ -52,7 +53,7 @@ export const Teams = () => {
           ].map(btn => (
             <button
               key={btn.id}
-              onClick={() => setCategory(btn.id)}
+              onClick={() => setCategory(btn.id as any)}
               className={`px-4 py-2 rounded cursor-pointer text-xs uppercase
                 ${category === btn.id ? "bg-black text-white" : "bg-gray-200"}
               `}
