@@ -1,9 +1,11 @@
 'use client'
 
 import { useEffect, useState } from "react"
+import { useRouter } from "next/navigation"
 import { CiSearch } from "react-icons/ci"
 import { motion, AnimatePresence } from "framer-motion"
 import { FaRunning, FaTshirt } from "react-icons/fa"
+
 const slides = [
     {
         icon: <FaRunning className="text-xl" />,
@@ -14,9 +16,11 @@ const slides = [
         text: "COMPRE O MANTO DO SEU TIME DO CORAÇÃO",
     },
 ]
+
 export const Navbar = () => {
     const [current, setCurrent] = useState(0)
     const [direction, setDirection] = useState(1)
+    const router = useRouter()
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -26,13 +30,11 @@ export const Navbar = () => {
         return () => clearInterval(interval)
     }, [])
 
-
     return (
         <div className="w-full flex flex-col">
             <div className="w-full h-8 text-black bg-gray-100 flex justify-between items-center p-8">
                 <div className="flex items-center">
-                    <div className="uppercase font-stretch-200% text-sm font-light">
-                    </div>
+                    <div className="uppercase font-stretch-200% text-sm font-light"></div>
                 </div>
                 <div className="flex items-center gap-4 text font-light">
                     <span className="hover:underline cursor-pointer text-xs">Acessibilidade</span>
@@ -44,15 +46,35 @@ export const Navbar = () => {
                     <span className="hover:underline cursor-pointer text-xs">Ajuda</span>
                 </div>
             </div>
+
             <div className="h-20 bg-white flex justify-between items-center px-8">
                 <img className="w-16 h-16" src="/images/logo.png" />
-                <div className="flex gap-12 text- font-thin text-black">
-                    <span className="">Lançamentos</span>
-                    <span className="">Masculino</span>
-                    <span className="">Feminino</span>
+
+                <div className="flex gap-12 font-thin text-black">
+                    <span className="cursor-pointer hover:text-gray-400 transition"
+                        onClick={() => router.push("/")}>
+                        Inicio
+                    </span>
+
+                    <span className="cursor-pointer hover:text-gray-400 transition"
+                        onClick={() => router.push("/new")}>
+                        Lançamentos
+                    </span>
+
+                    <span className="cursor-pointer hover:text-gray-400 transition"
+                        onClick={() => router.push("/masc")}>
+                        Masculino
+                    </span>
+
+                    <span className="cursor-pointer hover:text-gray-400 transition"
+                        onClick={() => router.push("/fem")}>
+                        Feminino
+                    </span>
                 </div>
+
                 <div></div>
             </div>
+
             <div className="relative w-full h-14 overflow-hidden bg-gray-100 flex justify-center items-center text-black">
                 <AnimatePresence initial={false} custom={direction}>
                     <motion.div

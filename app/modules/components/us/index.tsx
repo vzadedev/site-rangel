@@ -63,30 +63,41 @@ const items = [
 
 export const Us = () => {
   return (
-    <section className="w-full py-20 flex flex-col items-center">
-      <h2 className="text-4xl font-bold mb-3 text-center">Por que escolher a GoalPoint?</h2>
-      <p className="text-gray-400 font-light text-center mb-12 max-w-2xl">
-        Conheça os diferenciais que fazem da GoalPoint uma referência em qualidade, eficiência e inovação.
-      </p>
+    <div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-7xl px-6">
-        {items.map((item, index) => (
-          <motion.div
-            key={index}
-            whileHover={{ scale: 1.05, y: -6 }}
-            transition={{ type: "spring", stiffness: 200, damping: 15 }}
-            className="bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer"
-          >
-            <div className="relative w-full h-56">
-              <Image src={item.src} alt={item.title} fill className="object-cover" />
-            </div>
-            <div className="p-6">
-              <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-              <p className="text-sm text-gray-600 font-light">{item.description}</p>
-            </div>
-          </motion.div>
-        ))}
+      <section className="w-full py-20 flex flex-col items-center">
+        <h2 className="text-4xl font-bold mb-3 text-center">Por que escolher a GoalPoint?</h2>
+        <p className="text-gray-400 font-light text-center mb-12 max-w-2xl">
+          Conheça os diferenciais que fazem da GoalPoint uma referência em qualidade, eficiência e inovação.
+        </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-7xl px-6">
+          {items.map((item, index) => (
+            <motion.div
+              key={index}
+              whileHover={{ scale: 1.05, y: -6 }}
+              transition={{ type: "spring", stiffness: 200, damping: 15 }}
+              className="bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer"
+            >
+              <div className="relative w-full h-56">
+                <Image src={item.src} alt={item.title} fill className="object-cover" />
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
+                <p className="text-sm text-gray-600 font-light">{item.description}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+      <div className="flex flex-col w-full items-center  justify-center py-2">
+
+        <h2 className="text-4xl font-bold mb-3 text-center">PITBIS</h2>
+        <img
+          className="w-[700px] h-[500px] rounded-2xl" src="/images/pitibas.jpeg"
+        />
       </div>
-    </section>
+    </div>
+
   );
 };
